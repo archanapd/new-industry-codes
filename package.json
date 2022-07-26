@@ -2,7 +2,7 @@
   "name": "new-industry-codes",
   "version": "0.1.1",
   "private": true,
-  "homepage": "",
+  "homepage": "https://archanapd.github.io/new-industry-codes/",
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
@@ -41,7 +41,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "prettier-format": "prettier --config .prettierrc 'src/**/*.tsx' --write"
+    "deploy": "gh-pages -d build",
+    "prettier-format": "prettier --config .prettierrc './src/**/*.tsx' --write"
   },
   "eslintConfig": {
     "extends": [

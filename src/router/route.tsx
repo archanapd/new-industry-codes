@@ -1,5 +1,5 @@
-import { HashRouter, Route, Routes } from "react-router-dom";
-import Home from "../components/Home/Home";
+import { HashRouter, Route, Routes } from 'react-router-dom';
+import Home from '../components/Home/Home';
 
 const AppRouter = (props: any) => {
   return (
@@ -9,7 +9,7 @@ const AppRouter = (props: any) => {
         <Route
           path="*"
           element={
-            <main style={{ padding: "1rem" }}>
+            <main style={{ padding: '1rem' }}>
               <p>There's nothing here yet!</p>
             </main>
           }

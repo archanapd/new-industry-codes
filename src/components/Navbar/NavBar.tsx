@@ -7,11 +7,8 @@ export default function NavBar(props: any) {
   return (
     <div className="App">
       <Container maxWidth="md">
-        <Box sx={{ bgcolor: 'white', height: '1000px' }}>
-        NavBar
-        </Box>
+        <Box sx={{ bgcolor: 'white', height: '1000px' }}>NavBar</Box>
       </Container>
     </div>
   );
 }
-

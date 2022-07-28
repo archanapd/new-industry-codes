@@ -6,9 +6,7 @@ export default function WhySicCode(props: any) {
   return (
     <div className="App">
       <Container maxWidth="md">
-        <Box sx={{ bgcolor: 'white', height: '1000px' }}>
-        About
-        </Box>
+        <Box sx={{ bgcolor: 'white', height: '1000px' }}>About</Box>
       </Container>
     </div>
   );

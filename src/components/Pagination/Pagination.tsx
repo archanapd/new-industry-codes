@@ -7,9 +7,7 @@ export default function Pagination(props: any) {
   return (
     <div className="App">
       <Container maxWidth="md">
-        <Box sx={{ bgcolor: 'white', height: '1000px' }}>
-        Pagination
-        </Box>
+        <Box sx={{ bgcolor: 'white', height: '1000px' }}>Pagination</Box>
       </Container>
     </div>
   );

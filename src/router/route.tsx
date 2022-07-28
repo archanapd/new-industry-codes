@@ -1,3 +1,4 @@
+import SelectDropDown from 'components/SelectDropDown/SelectDropDown';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 import Home from '../components/Home/Home';
 
@@ -5,7 +6,7 @@ const AppRouter = (props: any) => {
   return (
     <HashRouter>
       <Routes>
-        <Route path="" element={<Home />} />
+        <Route path="" element={<SelectDropDown />} />
         <Route
           path="*"
           element={

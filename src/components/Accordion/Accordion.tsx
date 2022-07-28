@@ -7,11 +7,8 @@ export default function Accordion(props: any) {
   return (
     <div className="App">
       <Container maxWidth="md">
-        <Box sx={{ bgcolor: 'white', height: '1000px' }}>
-        Accordion
-        </Box>
+        <Box sx={{ bgcolor: 'white', height: '1000px' }}>Accordion</Box>
       </Container>
     </div>
   );
 }
-

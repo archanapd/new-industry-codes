@@ -7,23 +7,23 @@ console.log('Build environment: ', buildEnv);
 
 switch (buildEnv) {
   case 'production':
-    host = 'https://api.cakap.com/';
+    host = '';
     backendBaseUrl = '';
     break;
   case 'development':
-    host = 'https://api-dev.cakap.com/v3/material';
+    host = '';
     backendBaseUrl = '';
     break;
   case 'staging':
-    host = 'https://api-dev.cakap.com/v3/material';
+    host = '';
     backendBaseUrl = '';
     break;
   case 'hotfix':
-    host = 'https://api-dev.cakap.com/v3/material';
+    host = '';
     backendBaseUrl = '';
     break;
   default:
-    host = 'https://api-dev.cakap.com/v3/material';
+    host = '';
     backendBaseUrl = '';
     break;
 }

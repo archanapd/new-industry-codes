@@ -1,20 +1,13 @@
 import SelectDropDown from 'components/SelectDropDown/SelectDropDown';
 import { HashRouter, Route, Routes } from 'react-router-dom';
-import Home from '../components/Home/Home';
+import PageNotFound from 'views/404';
 
 const AppRouter = (props: any) => {
   return (
     <HashRouter>
       <Routes>
-        <Route path="" element={<SelectDropDown />} />
-        <Route
-          path="*"
-          element={
-            <main style={{ padding: '1rem' }}>
-              <p>There's nothing here yet!</p>
-            </main>
-          }
-        />
+        <Route path="/" element={<SelectDropDown />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </HashRouter>
   );

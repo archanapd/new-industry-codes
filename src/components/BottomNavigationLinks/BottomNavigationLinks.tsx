@@ -30,7 +30,11 @@ export default function BottomNavigationLinks() {
         value="nearby"
         icon={<LocationOnIcon />}
       />
-      <BottomNavigationAction label="Folder" value="folder" icon={<FolderIcon />} />
+      <BottomNavigationAction
+        label="Folder"
+        value="folder"
+        icon={<FolderIcon />}
+      />
     </BottomNavigation>
   );
 }

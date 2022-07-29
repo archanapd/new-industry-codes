@@ -2,7 +2,7 @@
   "name": "new-industry-codes",
   "version": "0.1.1",
   "private": true,
-  "homepage": "https://archanapd.github.io/new-industry-codes/",
+  "homepage": "",
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",

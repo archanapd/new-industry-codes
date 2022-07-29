@@ -1,7 +1,6 @@
 import React from 'react';
 import './Footer.scss';
 
-import { Container, Box } from '@mui/material';
 
 export default function Footer(props: any) {
   return (
@@ -19,7 +18,7 @@ export default function Footer(props: any) {
                 <option value="">Placeholder</option>
                 <option>United States</option>
               </select>
-            </li>
+            </li> 
             <li className="col-md-3 text-end  align-self-center">Copyright 2022 © <span>industry codes</span></li>
           </ul>
         </div>

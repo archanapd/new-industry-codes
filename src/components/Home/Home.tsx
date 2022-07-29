@@ -1049,11 +1049,11 @@ function App() {
         </section>
         <section className="industry-strip py-5">
           <ul className="d-flex align-self-center flex-column flex-md-row  text-center text-md-left ">
-            <li className="col"><a href="">Industry codes</a></li>
-            <li className="col"><a href="">Industry codes</a></li>
-            <li className="col"><a href="">Industry codes</a></li>
-            <li className="col"><a href="">Industry codes</a></li>
-            <li className="col"><a href="">Industry codes</a></li>
+            <li className="col"><a href="blank">Industry codes</a></li>
+            <li className="col"><a href="blank">Industry codes</a></li>
+            <li className="col"><a href="blank">Industry codes</a></li>
+            <li className="col"><a href="blank">Industry codes</a></li>
+            <li className="col"><a href="blank">Industry codes</a></li>
           </ul>
         </section>
         <section className="testimonials my-5">

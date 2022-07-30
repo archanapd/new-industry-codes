@@ -16,7 +16,9 @@ export default function Footer(props: any) {
             <li className="col-md-3">
               <SelectDropDown />
             </li>
-            <li className="col-md-3 text-end  align-self-center">Copyright 2022 © <span>industry codes</span></li>
+            <li className="col-md-3 text-end  align-self-center">
+              Copyright 2022 © <span>industry codes</span>
+            </li>
           </ul>
         </div>
       </footer>

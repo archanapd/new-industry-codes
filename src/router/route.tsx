@@ -8,7 +8,7 @@ const AppRouter = (props: any) => {
     <BrowserRouter>
       <Routes>
         <Route path="" element={<Home />} />
-        {/* <Route path="" element={<Search />} /> */}
+        <Route path="search" element={<Search />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>

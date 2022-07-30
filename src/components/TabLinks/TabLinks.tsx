@@ -18,7 +18,7 @@ export default function TabLinks() {
         onChange={handleChange}
         aria-label="secondary tabs example"
         centered
-        className='home-tabs'
+        className="home-tabs"
       >
         <Tab value="one" label="SIC" />
         <Tab value="two" label="NAICS" />

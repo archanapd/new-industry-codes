@@ -1,0 +1,47 @@
+.MuiPagination-ul {
+  button {
+    font-size: 1.4rem;
+    color: #888888;
+    &.Mui-selected {
+      background-color: var(--red);
+      color: var(--white);
+      &:hover,
+      &:focus {
+        background-color: var(--red);
+        color: var(--white);
+      }
+    }
+    &:hover,
+    &:focus {
+      background-color:rgba(240, 98, 64 ,0.17) ;
+      color: #888888;
+    }
+    &.MuiPaginationItem-previousNext {
+      &:focus {
+        background-color: transparent;
+        &::after,
+        &::before {
+          color: var(--red);
+        }
+      }
+    }
+    &[aria-label="Go to previous page"] {
+      color: #000;
+      &::after {
+        content: 'Previous';
+        text-transform: none;
+        padding-left: 1.6rem;
+        color: #888888;
+      }
+    }
+    &[aria-label="Go to next page"] {
+      color: #000;
+      &::before {
+        content: 'Next';
+        text-transform: none;
+        padding-right: 1.6rem;
+        color: #888888;
+      }
+    }
+  }
+}

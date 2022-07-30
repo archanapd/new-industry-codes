@@ -1,0 +1,13 @@
+.home-tabs {
+  button {
+    color: var(--grey);
+    font-size: 1.6rem;
+    &.Mui-selected {
+      color: var(--red);
+    }
+  }
+  .MuiTabs-indicator {
+    height: 3px;
+    background-color: var(--red);
+  }
+}

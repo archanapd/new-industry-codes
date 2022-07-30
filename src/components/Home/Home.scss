@@ -4,3 +4,13 @@
     background-position: 20px center;
     padding-left: 6rem !important;
 }
+.box-outline {
+    border: 1px solid #CDCDCD;
+    background-color: #fff;
+    fieldset {
+        border: 0;
+    }
+}
+.MuiButton-containedPrimary {
+    background-color: var(--red);
+}

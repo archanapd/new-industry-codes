@@ -4,6 +4,7 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
+import './SelectDropDown.scss';
 
 export default function SelectDropDown() {
   const [age, setAge] = React.useState('');
@@ -22,6 +23,7 @@ export default function SelectDropDown() {
           value={age}
           label="Age"
           onChange={handleChange}
+          className="box-white"
         >
           <MenuItem value={10}>Ten</MenuItem>
           <MenuItem value={20}>Twenty</MenuItem>

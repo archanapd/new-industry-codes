@@ -2,7 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Home.scss';
 
-import { Container, Box } from '@mui/material';
+import { Container, Box, TextField, Button } from '@mui/material';
 
 import NavBar from 'components/Navbar/NavBar';
 import bannerImg from 'assets/banner.png';
@@ -14,6 +14,9 @@ import arrowsImg from 'assets/arrows.png';
 import buildingImg from 'assets/img-1.png';
 import SelectDropDown from 'components/SelectDropDown/SelectDropDown';
 import Footer from 'components/Footer/Footer';
+import TabLinks from 'components/TabLinks/TabLinks';
+import OutlinedInput from '@mui/material/OutlinedInput';
+import SearchIcon from '@mui/icons-material/Search';
 
 function App() {
   return (
@@ -32,7 +35,14 @@ function App() {
                 <p className="lead">Maecenas pulvinar scelerisque metus,<br /> a porttitor nisl dapibus ac. Suspendisse vitae <br />mi
                   massa.</p>
                 <div className="gap-2 d-md-flex justify-content-md-start mt-4">
-                  <button type="button" className="btn btn-primary btn-lg px-4 me-md-2">Button</button>
+                  <Button style={{
+                    backgroundColor: "#f06240",
+                    borderRadius: '3px',
+                    minWidth: '160px',
+                    minHeight: '48px',
+                    textTransform: 'none',
+                    fontSize: '1.2rem',
+                  }} variant="contained">Button</Button>
                 </div>
               </div>
             </div>
@@ -45,892 +55,25 @@ function App() {
                 <SelectDropDown />
               </div>
               <div className="col-md-5">
-                <input type="text" className="form-control input-search-ico" id="firstName" placeholder="Search" value="" required />
+                {/* <SearchIcon/> */}
+                <OutlinedInput className="box-outline" fullWidth placeholder="Search" />
               </div>
               <div className="col-md-3">
-                <button type="button" className="btn btn-primary btn-lg px-4 me-md-2">Button</button>
+              <Button style={{
+                    backgroundColor: "#f06240",
+                    borderRadius: '3px',
+                    minWidth: '160px',
+                    minHeight: '48px',
+                    textTransform: 'none',
+                    fontSize: '1.2rem',
+                  }} variant="contained">Button</Button>
               </div>
             </div>
           </div>
         </section>
         <section className="home-list p-5">
           <div className="container">
-            <ul className="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
-              <li className="nav-item" role="presentation">
-                <button className="nav-link active px-5" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
-                  type="button" role="tab" aria-controls="pills-home" aria-selected="true">SIC</button>
-              </li>
-              <li className="nav-item" role="presentation">
-                <button className="nav-link px-5" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
-                  type="button" role="tab" aria-controls="pills-profile" aria-selected="false">NAICS</button>
-              </li>
-              <li className="nav-item" role="presentation">
-                <button className="nav-link px-5" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
-                  type="button" role="tab" aria-controls="pills-contact" aria-selected="false">ISIC</button>
-              </li>
-              <li className="nav-item" role="presentation">
-                <button className="nav-link px-5" id="pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#pills-disabled"
-                  type="button" role="tab" aria-controls="pills-disabled" aria-selected="false">NACE</button>
-              </li>
-            </ul>
-            <div className="tab-content mt-5" id="pills-tabContent">
-              <div className="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                <div className="row g-3 hover-list">
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Agriculture, Forestry, Fishing, Hunting
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>44-45</strong>
-                      </div>
-                      <div className="col-9">
-                        Mining, Quarrying, Oil, Gas Extraction
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Utilities
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>44-45</strong>
-                      </div>
-                      <div className="col-9">
-                        Construction
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Agriculture, Forestry, Fishing, Hunting
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Mining, Quarrying, Oil, Gas Extraction
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Utilities
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>44-45</strong>
-                      </div>
-                      <div className="col-9">
-                        Agriculture, Forestry, Fishing, Hunting
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Mining, Quarrying, Oil, Gas Extraction
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Utilities
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Agriculture, Forestry, Fishing, Hunting
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Mining, Quarrying, Oil, Gas Extraction
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Utilities
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Agriculture, Forestry, Fishing, Hunting
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Mining, Quarrying, Oil, Gas Extraction
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Utilities
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Agriculture, Forestry, Fishing, Hunting
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Mining, Quarrying, Oil, Gas Extraction
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Utilities
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Agriculture, Forestry, Fishing, Hunting
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Mining, Quarrying, Oil, Gas Extraction
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                <div className="row g-3 hover-list">
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Agriculture, Forestry, Fishing, Hunting
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>44-45</strong>
-                      </div>
-                      <div className="col-9">
-                        Mining, Quarrying, Oil, Gas Extraction
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Utilities
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>44-45</strong>
-                      </div>
-                      <div className="col-9">
-                        Construction
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Agriculture, Forestry, Fishing, Hunting
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Mining, Quarrying, Oil, Gas Extraction
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Utilities
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>44-45</strong>
-                      </div>
-                      <div className="col-9">
-                        Agriculture, Forestry, Fishing, Hunting
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Mining, Quarrying, Oil, Gas Extraction
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Utilities
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Agriculture, Forestry, Fishing, Hunting
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Mining, Quarrying, Oil, Gas Extraction
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Utilities
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Agriculture, Forestry, Fishing, Hunting
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Mining, Quarrying, Oil, Gas Extraction
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Utilities
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Agriculture, Forestry, Fishing, Hunting
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Mining, Quarrying, Oil, Gas Extraction
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Utilities
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Agriculture, Forestry, Fishing, Hunting
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Mining, Quarrying, Oil, Gas Extraction
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" >
-                <div className="row g-2 hover-list">
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Agriculture, Forestry, Fishing, Hunting
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>44-45</strong>
-                      </div>
-                      <div className="col-9">
-                        Mining, Quarrying, Oil, Gas Extraction
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Utilities
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>44-45</strong>
-                      </div>
-                      <div className="col-9">
-                        Construction
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Agriculture, Forestry, Fishing, Hunting
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Mining, Quarrying, Oil, Gas Extraction
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Utilities
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>44-45</strong>
-                      </div>
-                      <div className="col-9">
-                        Agriculture, Forestry, Fishing, Hunting
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Mining, Quarrying, Oil, Gas Extraction
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Utilities
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Agriculture, Forestry, Fishing, Hunting
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Mining, Quarrying, Oil, Gas Extraction
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Utilities
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Agriculture, Forestry, Fishing, Hunting
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Mining, Quarrying, Oil, Gas Extraction
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Utilities
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Agriculture, Forestry, Fishing, Hunting
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Mining, Quarrying, Oil, Gas Extraction
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Utilities
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Agriculture, Forestry, Fishing, Hunting
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Mining, Quarrying, Oil, Gas Extraction
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="tab-pane fade" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab">
-                <div className="row g-3 hover-list">
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Agriculture, Forestry, Fishing, Hunting
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>44-45</strong>
-                      </div>
-                      <div className="col-9">
-                        Mining, Quarrying, Oil, Gas Extraction
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Utilities
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>44-45</strong>
-                      </div>
-                      <div className="col-9">
-                        Construction
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Agriculture, Forestry, Fishing, Hunting
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Mining, Quarrying, Oil, Gas Extraction
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Utilities
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>44-45</strong>
-                      </div>
-                      <div className="col-9">
-                        Agriculture, Forestry, Fishing, Hunting
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Mining, Quarrying, Oil, Gas Extraction
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Utilities
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Agriculture, Forestry, Fishing, Hunting
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Mining, Quarrying, Oil, Gas Extraction
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Utilities
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Agriculture, Forestry, Fishing, Hunting
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Mining, Quarrying, Oil, Gas Extraction
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Utilities
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Agriculture, Forestry, Fishing, Hunting
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Mining, Quarrying, Oil, Gas Extraction
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Utilities
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Agriculture, Forestry, Fishing, Hunting
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="d-flex p-3 border bg-light">
-                      <div className="col-3">
-                        <strong>10</strong>
-                      </div>
-                      <div className="col-9">
-                        Mining, Quarrying, Oil, Gas Extraction
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <TabLinks />
           </div>
         </section>
         <section className="regions">
@@ -980,29 +123,30 @@ function App() {
             <div className="row g-3 my-4">
 
               <div className="col-md-5">
-                <input type="text" className="form-control input-search-ico" id="firstName" placeholder="Enter code or keyword" value=""
-                  required />
+                <OutlinedInput className="box-outline" fullWidth placeholder="Search" />
               </div>
               <div className="col-md-7">
 
                 <ul className="d-flex g-3 list-search">
-                  <li className=""><select className="form-select" id="country" required >
-                    <option value="">Placeholder</option>
-                    <option>United States</option>
-                  </select></li>
+                  <li className="">
+                    <SelectDropDown />
+                  </li>
                   <li className="list-search-btn"><button className="btn-filter"><img src={arrowsImg} /></button></li>
                   <li className="">
-                    <select className="form-select" id="country" required >
-                      <option value="">Placeholder</option>
-                      <option>United States</option>
-                    </select>
+                    <SelectDropDown />
                   </li>
                 </ul>
               </div>
 
               <div className="col-md-12 text-center mt-5">
-                <button type="button" className="btn btn-primary btn-lg px-4 me-md-2">Convert</button>
-              </div>
+              <Button style={{
+                    backgroundColor: "#f06240",
+                    borderRadius: '3px',
+                    minWidth: '160px',
+                    minHeight: '48px',
+                    textTransform: 'none',
+                    fontSize: '1.2rem',
+                  }} variant="contained">Convert</Button>              </div>
             </div>
           </div>
         </section>
@@ -1014,26 +158,23 @@ function App() {
             <div className="row g-3 my-4">
 
               <div className="col-md-4">
-                <select className="form-select" id="country" required>
-                  <option value="">Placeholder</option>
-                  <option>United States</option>
-                </select>
+                <SelectDropDown />
               </div>
               <div className="col-md-4">
-                <select className="form-select" id="country" required>
-                  <option value="">Placeholder</option>
-                  <option>United States</option>
-                </select>
+                <SelectDropDown />
               </div>
               <div className="col-md-4">
-                <select className="form-select" id="country" required>
-                  <option value="">Placeholder</option>
-                  <option>United States</option>
-                </select>
+                <SelectDropDown />
               </div>
               <div className="col-md-12 text-center mt-5">
-                <button type="button" className="btn btn-primary btn-lg px-4 me-md-2">Download</button>
-              </div>
+              <Button style={{
+                    backgroundColor: "#f06240",
+                    borderRadius: '3px',
+                    minWidth: '160px',
+                    minHeight: '48px',
+                    textTransform: 'none',
+                    fontSize: '1.2rem',
+                  }} variant="contained">Download</Button>              </div>
             </div>
           </div>
         </section>

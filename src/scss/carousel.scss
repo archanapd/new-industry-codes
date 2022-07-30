@@ -1,0 +1,27 @@
+.testimonial-slide li img {
+    width: 198px;
+    height: 198px;
+    border-radius: 50%;
+  }
+  .testimonial-slide li h5 {
+    color: var(--black-light);
+    font: normal normal bold 2rem/33px Poppins;
+  }
+  .carousel-control-prev {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='48' width='48'%3E%3Cpath fill='%235D5D5D' d='M24 40 8 24 24 8l2.1 2.1-12.4 12.4H40v3H13.7l12.4 12.4Z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    padding: 0;
+    width: 45px;
+    background-position: bottom left;
+    left: -92px;
+    bottom: 44px;
+  }
+  .carousel-control-next {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='48' width='48'%3E%3Cpath fill='%235D5D5D' d='m24 40-2.1-2.15L34.25 25.5H8v-3h26.25L21.9 10.15 24 8l16 16Z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    padding: 0;
+    width: 45px;
+    background-position: bottom right;
+    right: -92px;
+    bottom: 44px;
+  }

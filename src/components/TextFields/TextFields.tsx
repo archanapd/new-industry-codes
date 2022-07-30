@@ -7,27 +7,44 @@ export default function TextFields() {
     <Box
       component="form"
       sx={{
-        '& .MuiTextField-root': { m: 1, width: '25ch' }
+        '& .MuiTextField-root': { marginBottom: 2, width: '100%' }
       }}
       noValidate
       autoComplete="off"
     >
       <div>
         <TextField
-          error
           id="outlined-error"
-          label="Error"
-          defaultValue="Hello World"
+          label="Enter your name here."
+          placeholder='Enter your name here.'
+          style={{ fontSize: '2rem' }}
         />
         <TextField
-          error
           id="outlined-error-helper-text"
-          label="Error"
-          defaultValue="Hello World"
+          label="Enter company name"
           helperText="Incorrect entry."
+          placeholder='Enter company name'
+        />
+        <TextField
+          id="outlined-error-helper-text"
+          label="Enter your email"
+          helperText="Incorrect entry."
+          placeholder='Enter your email'
+        />
+        <TextField
+          id="outlined-error-helper-text"
+          label="Enter your contact number"
+          helperText="Incorrect entry."
+          placeholder='Enter your contact number'
+        />
+        <TextField
+          id="outlined-error-helper-text"
+          label="Enter your contact number"
+          helperText="Incorrect entry."
+          placeholder='Enter your contact number'
         />
       </div>
-      <div>
+      {/* <div>
         <TextField
           error
           id="filled-error"
@@ -60,7 +77,7 @@ export default function TextFields() {
           helperText="Incorrect entry."
           variant="standard"
         />
-      </div>
+      </div> */}
     </Box>
   );
 }

@@ -10,12 +10,12 @@ import Contact from 'views/Contact';
 const AppRouter = (props: any) => {
   return (
     <BrowserRouter>
-      <Routes>        
-        <Route path="" element={<Contact />} />
-        <Route path="" element={<CodeSystem />} />
-        <Route path="" element={<CodeConversion />} />
-        <Route path="" element={<About />} />
-        <Route path="" element={<Home />} />
+      <Routes>
+        <Route path="contact" element={<Contact />} />
+        <Route path="codesystem" element={<CodeSystem />} />
+        <Route path="codeconversion" element={<CodeConversion />} />
+        <Route path="about" element={<About />} />
+        <Route path="home" element={<Home />} />
         <Route path="search" element={<Search />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>

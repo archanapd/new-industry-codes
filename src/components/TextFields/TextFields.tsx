@@ -16,32 +16,32 @@ export default function TextFields() {
         <TextField
           id="outlined-error"
           label="Enter your name here."
-          placeholder='Enter your name here.'
+          placeholder="Enter your name here."
           style={{ fontSize: '2rem' }}
         />
         <TextField
           id="outlined-error-helper-text"
           label="Enter company name"
           helperText="Incorrect entry."
-          placeholder='Enter company name'
+          placeholder="Enter company name"
         />
         <TextField
           id="outlined-error-helper-text"
           label="Enter your email"
           helperText="Incorrect entry."
-          placeholder='Enter your email'
+          placeholder="Enter your email"
         />
         <TextField
           id="outlined-error-helper-text"
           label="Enter your contact number"
           helperText="Incorrect entry."
-          placeholder='Enter your contact number'
+          placeholder="Enter your contact number"
         />
         <TextField
           id="outlined-error-helper-text"
           label="Enter your contact number"
           helperText="Incorrect entry."
-          placeholder='Enter your contact number'
+          placeholder="Enter your contact number"
         />
       </div>
       {/* <div>

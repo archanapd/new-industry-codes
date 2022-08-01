@@ -7,3 +7,52 @@ $black-light: #252525;
 .logo {
   color: #fff;
 }
+.logo {
+  font: normal normal bold 2rem/40px Poppins;
+  letter-spacing: -0.14px;
+}
+
+.menu-nav {
+  height: 0;
+  width: 100%;
+  background-color: var(--black-light);
+  position: fixed;
+  z-index: -1;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  overflow-y: hidden;
+  transition: 0.4s;
+}
+.overlay-open {
+  height: 100vh;
+  z-index: 1;
+  opacity: 1;
+}
+.menu-list a,
+.menu-list p {
+  color: var(--white);
+}
+.menu-list a {
+  font-weight: 700;
+  margin-top: 5rem;
+  font-size: 2.2rem;
+  margin-bottom: 1.8rem;
+  display: block;
+}
+.menu-list p {
+  opacity: 0.5;
+  line-height: 1.6;
+}
+.btn-menu-close {
+  cursor: pointer;
+}
+.btn-menu-close svg {
+  width: 27px;
+}
+.menu-nav .form-control,
+.menu-nav .form-select {
+  border-color: var(--grey-border);
+  background-color: transparent;
+  color: var(--white);
+}

@@ -1,0 +1,98 @@
+$pink-100: #ca9fc140;
+$green-100: #7fc6b540;
+$yellow-100: #fbbe5040;
+$blue-100: #7ea5d226;
+$yellow: #fac003;
+$blue: #7ea5d2;
+.cutom-accordion {
+  box-shadow: unset !important;
+  &::before {
+    display: none;
+  }
+  .acc-title {
+    color: var(--black-light);
+    font-weight: bold;
+    font-family: "Poppins";
+    font-size: 1.3rem;
+    .acc-title-count {
+      display: inline-block;
+      min-width: 50px;
+      padding-right: 5px;
+    }
+  }
+  .MuiAccordionSummary-root {
+    border: 1px solid #cdcdcd;
+    &.Mui-expanded {
+      min-height: unset;
+    }
+    .MuiAccordionSummary-content.Mui-expanded {
+      margin: 12px 0;
+    }
+  }
+  .MuiAccordionDetails-root {
+    padding: 18px 0 0 0;
+  }
+}
+.custom-acc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  .d-flex {
+    gap: 10px;
+    width: 100%;
+  }
+  @media screen and (max-width: 990px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.dealer-data {
+  padding: 20px;
+  border: 1px solid #cdcdcd;
+  flex: 1;
+  font-size: 14px;
+  color: #5d5d5d;
+  span {
+    display: inline-block;
+    min-width: 30px;
+    padding-right: 5px;
+  }
+  &.bg-yellow,
+  &.bg-blue,
+  &.bg-light-pink,
+  &.bg-light-green,
+  &.bg-light-yellow,
+  &.bg-light-blue {
+    color: #252525;
+  }
+}
+.bg-yellow {
+  background-color: $yellow;
+  border-color: transparent;
+}
+.bg-blue {
+  background-color: $blue;
+  border-color: transparent;
+}
+.bg-light-pink {
+  background-color: $pink-100;
+  border-color: transparent;
+}
+.bg-light-green {
+  background-color: $green-100;
+  border-color: transparent;
+}
+.bg-light-yellow {
+  background-color: $yellow-100;
+  border-left: 2px solid $yellow;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+}
+.bg-light-blue {
+  background-color: $blue-100;
+  border-left: 2px solid $blue;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+}

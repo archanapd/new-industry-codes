@@ -4,13 +4,6 @@
     background-position: 20px center;
     padding-left: 6rem !important;
 }
-.box-outline {
-    border: 1px solid #cdcdcd;
-    background-color: #fff;
-    fieldset {
-        border: 0;
-    }
-}
 .MuiButton-containedPrimary {
     background-color: var(--red);
 }
@@ -26,12 +19,12 @@
 
 .banner h1,
 .img-block h2 {
-    font: normal normal bold 4rem/55px Poppins;
+    font: normal normal bold 2.5rem/55px Poppins;
     color: var(--white);
 }
 .banner p {
     color: var(--white);
-    font: normal normal 300 2rem/30px Poppins;
+    font: normal normal 300 1.25rem/30px Poppins;
 }
 .home-list,
 .download,
@@ -58,7 +51,7 @@
 .code h2,
 .download h2,
 .testimonials h2 {
-    font-size: 3.5rem;
+    font-size: 2.25rem;
 }
 .regions img {
     max-width: 80%;
@@ -74,7 +67,7 @@
     padding: 0 10px;
 }
 .industry-strip a {
-    font: normal normal bold 2rem/40px Poppins;
+    font: normal normal bold 1.25rem/40px Poppins;
     letter-spacing: -0.14px;
     color: var(--grey);
 }

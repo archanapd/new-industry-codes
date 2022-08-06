@@ -27,7 +27,7 @@ export default function NavBar(props: any) {
               sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
               className="logo"
               style={{
-                fontSize: '2rem',
+                fontSize: '1.25rem',
                 fontFamily: 'Poppins',
                 fontWeight: 'bold'
               }}
@@ -35,7 +35,7 @@ export default function NavBar(props: any) {
               Industry codes
             </Typography>
             <IconButton size="large" aria-label="search" color="inherit">
-              <SearchIcon style={{ fontSize: '3rem' }} />
+              <SearchIcon style={{ fontSize: '1.8rem' }} />
             </IconButton>
             <IconButton
               size="large"
@@ -44,7 +44,7 @@ export default function NavBar(props: any) {
               aria-label="menu"
               sx={{ mr: 2 }}
             >
-              <MenuIcon style={{ fontSize: '3rem' }} />
+              <MenuIcon style={{ fontSize: '1.8rem' }} />
             </IconButton>
           </Toolbar>
         </div>

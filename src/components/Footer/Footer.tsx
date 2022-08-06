@@ -6,7 +6,7 @@ export default function Footer(props: any) {
   return (
     <div>
       <footer id="footer" className="py-5">
-        <div className="container py-5">
+        <div className="container">
           <ul className="row  align-self-center">
             <li className="col-md-5 d-flex footer-nav  align-self-center">
               <a href="">Code Systems</a>

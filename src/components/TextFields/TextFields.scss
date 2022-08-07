@@ -1,8 +1,5 @@
-.box-outline  {
-    input {
-        font-size: 2rem;
-    }
-}
-.MuiInputBase-input {
-    font-size: 2rem;
+.box-outline {
+  .MuiInputBase-root {
+    background-color: #fff;
+  }
 }

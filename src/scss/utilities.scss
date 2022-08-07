@@ -1,0 +1,18 @@
+.block-title {
+    font-family: "Poppins" !important;
+}
+.dot-border {
+    border-bottom: 1px dashed #e1e1e1;
+}
+.txt-small {
+    font-size: 14px;
+    color: #5D5D5D;
+}
+.color-bar {
+    width: 100%;
+    .bar-nom {
+        display: inline-block;
+        padding-right: 10px;
+        font-weight: 700;
+    }
+}

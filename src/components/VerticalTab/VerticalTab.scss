@@ -1,0 +1,63 @@
+.v-tab {
+    * {
+        font-family: Poppins;
+    }
+    .tabs {
+        padding:24px 0 3rem 0;
+    }
+}
+.code-ico-desc {
+    color: var(--black-light);
+    font-weight: 700;
+    small {
+        font-weight: normal;
+        color: #5d5d5d;
+        display: block;
+    }
+}
+.code-ico-color-red {
+    color: #F06240;
+}
+.classification-bar {
+    .color-bar {
+        color: #252525;
+        padding: 14px;
+        border: 1px solid transparent;
+        font-size: 14px;
+        &.bg-light-yellow {
+            border-color: #FAC00380;
+        }
+        &.bg-light-green {
+            border-color: #4AAE9780;
+        }
+    }
+}
+.vtab-aside {
+    .MuiTab-root {
+        text-transform: unset;
+        font-weight: 700;
+        color: #252525;
+        font-family: Poppins;
+        align-items: flex-start;
+        font-size: 18px;
+        padding: 30px 0;
+        position: relative;
+        text-align: left;
+        &.Mui-selected {
+            color: #F06240;
+            &::after {
+                content: "";
+                width: 30px;
+                height: 3px;
+                background: #F06240;
+                position: absolute;
+                top: 70px;
+    
+            }
+        }
+
+    }
+}
+.MuiTabs-indicator {
+    display: none;
+}

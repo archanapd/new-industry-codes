@@ -73,10 +73,11 @@ function App() {
               </div>
               <div className="col-md-5">
                 {/* <SearchIcon/> */}
-                <OutlinedInput
-                  className="box-outline"
+                  <TextField
+                  label="Search"
+                  placeholder='Search'
                   fullWidth
-                  placeholder="Search"
+                  style={{ fontSize: '2rem' }}
                 />
               </div>
               <div className="col-md-3">
@@ -86,6 +87,7 @@ function App() {
                     borderRadius: '3px',
                     minWidth: '160px',
                     minHeight: '48px',
+                    height: '100%',
                     textTransform: 'none',
                     fontSize: '1.2rem'
                   }}
@@ -167,10 +169,17 @@ function App() {
             </p>
             <div className="row g-3 my-4">
               <div className="col-md-5">
-                <OutlinedInput
+                {/* <OutlinedInput
                   className="box-outline"
                   fullWidth
                   placeholder="Search"
+                /> */}
+                <TextField
+                  className="box-outline"
+                  label="Search"
+                  placeholder='Search'
+                  fullWidth
+                  style={{ fontSize: '2rem' }}
                 />
               </div>
               <div className="col-md-7">

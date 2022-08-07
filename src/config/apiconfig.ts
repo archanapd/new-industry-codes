@@ -11,11 +11,11 @@ switch (buildEnv) {
     backendBaseUrl = '';
     break;
   case 'development':
-    host = '';
+    host = 'http://3.224.174.111:8080/';
     backendBaseUrl = '';
     break;
   case 'staging':
-    host = '';
+    host = 'http://3.224.174.111:8080/';
     backendBaseUrl = '';
     break;
   case 'hotfix':

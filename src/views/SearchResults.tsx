@@ -1,10 +1,32 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { callAPI } from '../helpers/api';
+import { BASE_URL } from '../config/apiconfig';
 
 import { Container, Box, Grid } from '@mui/material';
 import SelectDropDown from 'components/SelectDropDown/SelectDropDown';
 import PaginationLink from 'components/PaginationLink/PaginationLink';
 
 export default function SearchResults(props: any) {
+
+  let [searchResults, setSearchResults]: any = useState([]);
+
+  const getSearchResults = () => {
+    callAPI({
+      method: 'get',
+      resource: BASE_URL + 'search?naics=111',
+      success: (jsonResponse) => {
+        setSearchResults(jsonResponse);
+      },
+      error: (error) => console.log(error)
+    });
+  }
+
+  
+  useEffect(() => {
+    getSearchResults();
+  });
+
+
   return (
     <div className="App">
       <Container maxWidth="xl">
@@ -12,7 +34,7 @@ export default function SearchResults(props: any) {
           className="page-not-found d-flex align-items-center"
           sx={{ height: '100%' }}
         >
-          <div>
+          {searchResults && searchResults.data && <div>
             <h2 className="mb-4 mt-5 pt-4">
               311- Food Manufacturing showing 30 results
             </h2>
@@ -25,119 +47,22 @@ export default function SearchResults(props: any) {
               </Grid>
             </Grid>
             <ul className=" mt-5  mb-5 row search-result-list">
-              <li className="col-md-3 mb-4">
+            {searchResults.data.data.map((item: any, i: number) => {
+              return (
+              <li className="col-md-3 mb-4" key={i}>
                 <div className="p-5">
-                  <h5>Aliquam ac neque nisl.</h5>
+                  <h5>{item.short_desc}</h5>
                   <p>
-                    Aliquam ac neque nisl. Cras nec elit in mauris semper
-                    mollis. Nam ultricies lectus sit amet nulla
+                    {item.long_desc}
                   </p>
                 </div>
-              </li>
-              <li className="col-md-3 mb-4">
-                <div className="p-5">
-                  <h5>Aliquam ac neque nisl.</h5>
-                  <p>
-                    Aliquam ac neque nisl. Cras nec elit in mauris semper
-                    mollis. Nam ultricies lectus sit amet nulla
-                  </p>
-                </div>
-              </li>
-              <li className="col-md-3 mb-4">
-                <div className="p-5">
-                  <h5>Aliquam ac neque nisl.</h5>
-                  <p>
-                    Aliquam ac neque nisl. Cras nec elit in mauris semper
-                    mollis. Nam ultricies lectus sit amet nulla
-                  </p>
-                </div>
-              </li>
-              <li className="col-md-3 mb-4">
-                <div className="p-5">
-                  <h5>Aliquam ac neque nisl.</h5>
-                  <p>
-                    Aliquam ac neque nisl. Cras nec elit in mauris semper
-                    mollis. Nam ultricies lectus sit amet nulla
-                  </p>
-                </div>
-              </li>
-              <li className="col-md-3 mb-4">
-                <div className="p-5">
-                  <h5>Aliquam ac neque nisl.</h5>
-                  <p>
-                    Aliquam ac neque nisl. Cras nec elit in mauris semper
-                    mollis. Nam ultricies lectus sit amet nulla
-                  </p>
-                </div>
-              </li>
-              <li className="col-md-3 mb-4">
-                <div className="p-5">
-                  <h5>Aliquam ac neque nisl.</h5>
-                  <p>
-                    Aliquam ac neque nisl. Cras nec elit in mauris semper
-                    mollis. Nam ultricies lectus sit amet nulla
-                  </p>
-                </div>
-              </li>
-              <li className="col-md-3 mb-4">
-                <div className="p-5">
-                  <h5>Aliquam ac neque nisl.</h5>
-                  <p>
-                    Aliquam ac neque nisl. Cras nec elit in mauris semper
-                    mollis. Nam ultricies lectus sit amet nulla
-                  </p>
-                </div>
-              </li>
-              <li className="col-md-3 mb-4">
-                <div className="p-5">
-                  <h5>Aliquam ac neque nisl.</h5>
-                  <p>
-                    Aliquam ac neque nisl. Cras nec elit in mauris semper
-                    mollis. Nam ultricies lectus sit amet nulla
-                  </p>
-                </div>
-              </li>
-              <li className="col-md-3 mb-4">
-                <div className="p-5">
-                  <h5>Aliquam ac neque nisl.</h5>
-                  <p>
-                    Aliquam ac neque nisl. Cras nec elit in mauris semper
-                    mollis. Nam ultricies lectus sit amet nulla
-                  </p>
-                </div>
-              </li>
-              <li className="col-md-3 mb-4">
-                <div className="p-5">
-                  <h5>Aliquam ac neque nisl.</h5>
-                  <p>
-                    Aliquam ac neque nisl. Cras nec elit in mauris semper
-                    mollis. Nam ultricies lectus sit amet nulla
-                  </p>
-                </div>
-              </li>
-              <li className="col-md-3 mb-4">
-                <div className="p-5">
-                  <h5>Aliquam ac neque nisl.</h5>
-                  <p>
-                    Aliquam ac neque nisl. Cras nec elit in mauris semper
-                    mollis. Nam ultricies lectus sit amet nulla
-                  </p>
-                </div>
-              </li>
-              <li className="col-md-3 mb-4">
-                <div className="p-5">
-                  <h5>Aliquam ac neque nisl.</h5>
-                  <p>
-                    Aliquam ac neque nisl. Cras nec elit in mauris semper
-                    mollis. Nam ultricies lectus sit amet nulla
-                  </p>
-                </div>
-              </li>
+              </li>)
+               })}
             </ul>
             <div className="d-flex justify-content-end mb-5">
-              <PaginationLink />
+              <PaginationLink totalPages={searchResults.data.rowCount}/>
             </div>
-          </div>
+          </div>}
         </Box>
       </Container>
     </div>

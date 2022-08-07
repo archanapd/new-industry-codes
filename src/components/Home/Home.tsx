@@ -73,9 +73,9 @@ function App() {
               </div>
               <div className="col-md-5">
                 {/* <SearchIcon/> */}
-                  <TextField
+                <TextField
                   label="Search"
-                  placeholder='Search'
+                  placeholder="Search"
                   fullWidth
                   style={{ fontSize: '2rem' }}
                 />
@@ -177,7 +177,7 @@ function App() {
                 <TextField
                   className="box-outline"
                   label="Search"
-                  placeholder='Search'
+                  placeholder="Search"
                   fullWidth
                   style={{ fontSize: '2rem' }}
                 />

@@ -13,7 +13,7 @@ import NaiscCodes from 'views/NaiscCode';
 const AppRouter = (props: any) => {
   return (
     <BrowserRouter>
-      <Routes>        
+      <Routes>
         <Route path="naiscCodes" element={<NaiscCodes />} />
         <Route path="structure" element={<StructureOfNaics />} />
         <Route path="whySicCode" element={<WhySicCode />} />

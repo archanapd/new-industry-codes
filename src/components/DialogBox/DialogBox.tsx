@@ -9,17 +9,14 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 import './DialogBox.scss';
 
-export default function DialogBox() {
-  const [open, setOpen] = React.useState(true);
+export default function DialogBox(props: any) {
+  let { popup, showPopup } = props;
+
   const theme = useTheme();
   const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
 
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
   const handleClose = () => {
-    setOpen(false);
+    showPopup(false);
   };
 
   const [maxWidth, setMaxWidth] = React.useState<DialogProps['maxWidth']>('md');
@@ -32,7 +29,7 @@ export default function DialogBox() {
       </Button> */}
       <Dialog
         fullScreen={fullScreen}
-        open={open}
+        open={popup}
         onClose={handleClose}
         aria-labelledby="responsive-dialog-title"
         className='tablist-popup'

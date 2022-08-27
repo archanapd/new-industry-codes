@@ -1,15 +1,16 @@
 import * as React from 'react';
 import Button from '@mui/material/Button';
-import Dialog from '@mui/material/Dialog';
+import Dialog, { DialogProps } from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
+import './DialogBox.scss';
 
 export default function DialogBox() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(true);
   const theme = useTheme();
   const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
 
@@ -21,34 +22,29 @@ export default function DialogBox() {
     setOpen(false);
   };
 
+  const [maxWidth, setMaxWidth] = React.useState<DialogProps['maxWidth']>('md');
+
+
   return (
     <div>
-      <Button variant="outlined" onClick={handleClickOpen}>
+      {/* <Button variant="outlined" onClick={handleClickOpen}>
         Open responsive dialog
-      </Button>
+      </Button> */}
       <Dialog
         fullScreen={fullScreen}
         open={open}
         onClose={handleClose}
         aria-labelledby="responsive-dialog-title"
+        className='tablist-popup'
+        maxWidth="md"
       >
-        <DialogTitle id="responsive-dialog-title">
-          {"Use Google's location service?"}
-        </DialogTitle>
-        <DialogContent>
-          <DialogContentText>
-            Let Google help apps determine location. This means sending anonymous
-            location data to Google, even when no apps are running.
-          </DialogContentText>
+        <DialogContent className='tablist-popup-content px-4'>
+          <ul className='tablist-popup-item'>
+            <li className='d-flex'><strong className='pe-3'>31 -</strong> Food</li>
+            <li className='d-flex'><strong className='pe-3'>31 -</strong> Food</li>
+            <li className='d-flex'><strong className='pe-3'>31 -</strong> Food</li>
+          </ul>
         </DialogContent>
-        <DialogActions>
-          <Button autoFocus onClick={handleClose}>
-            Disagree
-          </Button>
-          <Button onClick={handleClose} autoFocus>
-            Agree
-          </Button>
-        </DialogActions>
       </Dialog>
     </div>
   );

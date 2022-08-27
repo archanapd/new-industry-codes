@@ -56,12 +56,12 @@ export default function TabLinks() {
       data : menuValueSelected
     }
 
-    //showDialogBox(true);
+    showDialogBox(true);
 
-    navigate('/structure', {
-      replace : true,
-      state : data 
-    });
+    // navigate('/structure', {
+    //   replace : true,
+    //   state : data 
+    // });
   };
 
   // const navigateToStructure = () => {

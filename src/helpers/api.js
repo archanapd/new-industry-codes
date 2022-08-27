@@ -1,28 +1,30 @@
 import axios from "axios";
 
-let axiosInstance = axios.create({
-  headers: {
-    Authorization: "",
-  },
-});
-
 export const callAPI = ({
   method,
   resource,
+  params = {},
   data = {},
   success = (data) => data,
   error = (data) => data,
   headers = { "Content-Type": "application/json" },
 }) => {
+  let axiosInstance = axios.create({
+    headers: {
+      Authorization: "",
+    },
+    params: params
+  });
+
   let axiosInstanceGenerator =
     method === "delete"
       ? axiosInstance[method](resource, {
-          data,
-          headers,
-        })
+        data,
+        headers,
+      })
       : axiosInstance[method](resource, data, {
-          headers,
-        });
+        headers
+      });
 
   return axiosInstanceGenerator
     .then((response) => {

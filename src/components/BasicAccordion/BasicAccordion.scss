@@ -4,6 +4,8 @@ $yellow-100: #fbbe5040;
 $blue-100: #7ea5d226;
 $yellow: #fac003;
 $blue: #7ea5d2;
+$pink: #CA9FC1;
+$green: #7FC6B5;
 .cutom-accordion {
   box-shadow: unset !important;
   &::before {
@@ -95,4 +97,24 @@ $blue: #7ea5d2;
   border-top-color: transparent;
   border-right-color: transparent;
   border-bottom-color: transparent;
+}
+
+.bg-light-pink:hover {
+  background-color: $pink !important;
+  color: var(--white);
+}
+
+.bg-light-yellow:hover {
+  background-color: $yellow !important;
+  color: var(--white);
+}
+
+.bg-light-blue:hover {
+  background-color: $blue !important;
+  color: var(--white);
+}
+
+.bg-light-green:hover {
+  background-color: $green !important;
+  color: var(--white);
 }

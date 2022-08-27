@@ -9,6 +9,11 @@ import Contact from 'views/Contact';
 import WhySicCode from 'views/WhySicCode';
 import StructureOfNaics from 'views/StructureOfNaics';
 import NaiscCodes from 'views/NaiscCode';
+import Terms from 'views/Terms'
+import TermsAndPrivacy from 'views/TermsAndPrivacy';
+import Menu from 'views/Menu';
+import HomeSearch from 'views/HomeSearch';
+
 
 const AppRouter = (props: any) => {
   return (
@@ -21,9 +26,13 @@ const AppRouter = (props: any) => {
         <Route path="codeSystem" element={<CodeSystem />} />
         <Route path="codeConversion" element={<CodeConversion />} />
         <Route path="about" element={<About />} />
-        <Route path="home" element={<Home />} />
+        <Route path="/" element={<Home />} />
+        <Route path="menu" element={<Menu />} />
         <Route path="search" element={<Search />} />
+        <Route path="terms" element={<Terms />} />
+        <Route path="termsAndPrivacy" element={<TermsAndPrivacy />} />
         <Route path="*" element={<PageNotFound />} />
+        <Route path="homesearch" element={<HomeSearch />} />
       </Routes>
     </BrowserRouter>
   );

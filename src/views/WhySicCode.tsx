@@ -7,6 +7,8 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import SelectDropDown from 'components/SelectDropDown/SelectDropDown';
 import arrowsImg from 'assets/arrows.png';
+import { display } from '@mui/system';
+import { grey } from '@mui/material/colors';
 
 export default function WhySicCode(props: any) {
   return (
@@ -24,8 +26,107 @@ export default function WhySicCode(props: any) {
           </div>
         </section>
         <main className="">
-          <section className="why-sic-timeline"></section>
-          <section className="code bg-grey code-conversion-block py-5">
+          <section className="why-sic-timeline py-5">
+            <div className="container px-4 py-5 ">
+              <div style={{height: '110px', display: 'flex',justifyContent: 'space-between'}}>
+                <div>
+              <div className="step-1"></div>
+              <div className="step-1-a"></div>
+              <div className="step-1"></div>
+             <div className="step-1-b"><h5 className="head-1">Step 1</h5><br/>
+             <p className="para">Aliquam ac neque nisl. Cras <br/> nec elit in mauris sember<br/>mollis. Nam ultricies  lectus sit</p>
+             </div>
+             </div>
+              <div>
+              <div className="step-2"></div>
+              <div className="step-2-a"></div>
+              <div className="step-2"></div>
+              <div className="step-1-b"><h5 className="head-2">Step 1</h5><br/>
+             <p className="para">Aliquam ac neque nisl. Cras <br/> nec elit in mauris sember<br/>mollis. Nam ultricies  lectus sit</p>
+             </div>
+            </div>
+            <div>
+            <div className="step-3"></div>
+            <div className="step-3-a"></div>
+             <div className="step-3"></div>
+             <div className="step-1-b"><h5 className="head-3">Step 1</h5><br/>
+             <p className="para">Aliquam ac neque nisl. Cras <br/> nec elit in mauris sember<br/>mollis. Nam ultricies  lectus sit</p>
+             </div>
+            </div>
+            <div>
+            <div className="step-4"></div>
+            <div className="step-4-a"></div>
+            <div className="step-4"></div>
+            <div className="step-1-b"><h5 className="head-4">Step 1</h5><br/>
+             <p className="para">Aliquam ac neque nisl. Cras <br/> nec elit in mauris sember<br/>mollis. Nam ultricies lectus sit</p>
+             </div>
+            </div>
+             </div>
+             <div style={{height:'80px',display: 'flex',}}>
+              
+              <div className='square-1'>
+                <div style={{display:'flex',justifyContent: 'center',alignItems:'center',color:'#fff',height:'100%'}}>
+                <div>1995</div>
+                </div>
+                <div className='shape'></div>
+                <div className='hr-line'></div>
+              </div>
+
+
+               <div className='square-2'>
+                <div style={{display:'flex',justifyContent: 'center',alignItems:'center',color:'#fff',height:'100%'}}>
+                <div>1995</div>
+                </div>
+                <div className='shape-a'></div>
+                <div className='hr-line-a'></div>
+              </div>
+
+              <div className='square-3'>
+                <div style={{display:'flex',justifyContent: 'center',alignItems:'center',color:'#fff',height:'100%'}}>
+                <div>1995</div>
+                </div>
+                <div className='shape-b'></div>
+                <div className='hr-line-b'></div>
+              </div>
+
+              <div className='square-4'>
+                <div style={{display:'flex',justifyContent: 'center',alignItems:'center',color:'#fff',height:'100%'}}>
+                <div>1995</div>
+                </div>
+                <div className='shape-c'></div>
+                <div className='hr-line-c'></div>
+              </div>
+               
+              <div className='square-5'>
+                <div style={{display:'flex',justifyContent: 'center',alignItems:'center',color:'#fff',height:'100%'}}>
+                <div>1995</div>
+                </div>
+                <div className='shape-d'></div>
+                <div className='hr-line-d'></div>
+              </div>
+
+              <div className='square-6'>
+                <div style={{display:'flex',justifyContent: 'center',alignItems:'center',color:'#fff',height:'100%'}}>
+                <div>1995</div>
+                </div>
+                <div className='shape-f'></div>
+                <div className='hr-line-f'></div>
+              </div>
+
+              <div className='square-7'>
+                <div style={{display:'flex',justifyContent: 'center',alignItems:'center',color:'#fff',height:'100%'}}>
+                <div>1995</div>
+                </div>
+                <div className='shape-g'></div>
+              </div>
+
+              
+
+
+             </div>
+            </div> 
+          </section>
+          <section className="code bg-grey code-conversion-block py-5 mt--600">
             <div className="container px-4 py-5">
               <div className="row mb-5">
                 <div className="col-md-6">

@@ -129,6 +129,7 @@ h4 {
 .search-result-list {
   li {
     div {
+      height: 300px;
       border: 1px solid #cdcdcd;
       h5 {
         color: #252525;
@@ -305,4 +306,251 @@ h4 {
 }
 .bg-yellow {
   background-color: $yellow;
+}
+.step-1{
+  width: 5px;
+  height: 5px;
+  background-color: #f06240;
+  border-radius: 50px;
+}
+.step-1-a{
+  border-left: 1px solid #f06240;
+  height: 80px;
+  margin-left: 2px;
+
+}
+.step-1-b{
+  margin-left: 15px;
+  position: relative;
+  bottom: 92px;
+}
+.head-1{
+  color: #f06240;
+}
+.para{
+  margin-top: -25px;
+}
+.step-2{
+  width: 5px;
+  height: 5px;
+  background-color: #469D89;
+  border-radius: 50px;
+}
+.step-2-a{
+  border-left: 1px solid #469D89;
+  height: 80px;
+  margin-left: 2px;
+
+}
+.head-2{
+  color:  #469D89;
+}
+.step-3{
+  width: 5px;
+  height: 5px;
+  background-color:  #5d5d5d;
+  border-radius: 50px;
+}
+.step-3-a{
+  border-left: 1px solid #5d5d5d;
+  height: 80px;
+  margin-left: 2px;
+
+}
+.head-3{
+  color: #5d5d5d;
+}
+.step-4{
+  width: 5px;
+  height: 5px;
+  background-color: #7EA5D2;
+  border-radius: 50px;
+}
+.step-4-a{
+  border-left: 1px solid #7EA5D2;
+  height: 80px;
+  margin-left: 2px;
+
+}
+.head-4{
+  color:  #7EA5D2;
+}
+.square-1{
+  position: relative;
+  height: 33px;
+  width: 125px;
+  background-color: #f06240;
+  
+ // border: 1px solid red;
+}
+.shape{
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: #f06240;
+  // border: 1px solid black;
+  transform: rotate(45deg);
+  left:112px;
+  top: 3px;
+  border-radius: none;
+}
+.hr-line{
+  width: 37px;
+  height: 2px;
+  background-color: #f06240;
+  position: relative;
+  left: 140px;
+  bottom: 18px;
+}
+.square-2{
+  position: relative;
+  height: 33px;
+  width: 125px;
+  left: 52px;
+  background-color: #FAC003;
+}
+.shape-a{
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: #FAC003;
+  // border: 1px solid black;
+  transform: rotate(45deg);
+  left:112px;
+  top: 3px;
+  border-radius: none;
+}
+.hr-line-a{
+  width: 37px;
+  height: 2px;
+  background-color: #FAC003;
+  position: relative;
+  left: 140px;
+  bottom: 18px;
+}
+.square-3{
+  position: relative;
+  height: 33px;
+  width: 125px;
+  left: 101px;
+  background-color: #469D89;
+}
+.shape-b{
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: #469D89;
+  // border: 1px solid black;
+  transform: rotate(45deg);
+  left:112px;
+  top: 3px;
+  border-radius: none;
+}
+.hr-line-b{
+  width: 37px;
+  height: 2px;
+  background-color: #469D89;
+  position: relative;
+  left: 140px;
+  bottom: 18px;
+}
+.square-4{
+  position: relative;
+  height: 33px;
+  width: 125px;
+  left: 150px;
+  background-color: #252525;
+}
+.shape-c{
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: #252525;
+  // border: 1px solid black;
+  transform: rotate(45deg);
+  left:112px;
+  top: 3px;
+  border-radius: none;
+}
+.hr-line-c{
+  width: 37px;
+  height: 2px;
+  background-color: #252525;
+  position: relative;
+  left: 140px;
+  bottom: 18px;
+}
+.square-5{
+  position: relative;
+  height: 33px;
+  width: 125px;
+  left: 200px;
+  background-color: #5d5d5d;
+}
+.shape-d{
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: #5d5d5d;
+  // border: 1px solid black;
+  transform: rotate(45deg);
+  left:112px;
+  top: 3px;
+  border-radius: none;
+}
+.hr-line-d{
+  width: 37px;
+  height: 2px;
+  background-color: #5d5d5d;;
+  position: relative;
+  left: 140px;
+  bottom: 18px;
+}
+.square-6{
+  position: relative;
+  height: 33px;
+  width: 125px;
+  left: 250px;
+  background-color: #CA9FC1;;
+}
+.shape-f{
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: #CA9FC1;
+  // border: 1px solid black;
+  transform: rotate(45deg);
+  left:112px;
+  top: 3px;
+  border-radius: none;
+}
+.hr-line-f{
+  width: 37px;
+  height: 2px;
+  background-color: #CA9FC1;
+  position: relative;
+  left: 140px;
+  bottom: 18px;
+}
+.square-7{
+  position: relative;
+  height: 33px;
+  width: 125px;
+  left: 300px;
+  background-color: #7EA5D2;
+}
+.shape-g{
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: #7EA5D2;
+  // border: 1px solid black;
+  transform: rotate(45deg);
+  left:112px;
+  top: 3px;
+  border-radius: none;
+}
+
+.pointer{
+  cursor: pointer;
 }

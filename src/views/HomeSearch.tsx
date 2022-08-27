@@ -6,7 +6,7 @@ import { Container, Box, Grid } from '@mui/material';
 import SelectDropDown from 'components/SelectDropDown/SelectDropDown';
 import PaginationLink from 'components/PaginationLink/PaginationLink';
 
-export default function SearchResults(props: any) {
+export default function HomeSearch(props: any) {
   let [searchResults, setSearchResults]: any = useState<any[]>([]);
 
   React.useEffect(() => {
@@ -34,24 +34,17 @@ export default function SearchResults(props: any) {
         >
           {searchResults && searchResults.data && (
             <div>
-              <h2 className="mb-4 mt-5 pt-4">
-                311- Food Manufacturing showing 30 results
-              </h2>
-              <Grid container spacing={2}>
-                <Grid item xs={5}>
-                  <SelectDropDown />
-                </Grid>
-                <Grid item xs={3}>
-                  <SelectDropDown />
-                </Grid>
-              </Grid>
               <ul className=" mt-5  mb-5 row search-result-list">
                 {searchResults.data.data.map((item: any, i: number) => {
                   return (
                     <li className="col-md-3 mb-4" key={i}>
-                      <div className="p-5">
+                    
+                        <div className="p-5"> 
+
+                       
+                      
                         <h5>{item.short_desc}</h5>
-                        <p>{item.long_desc}</p>
+                        <p className='hide-item'>{item.long_desc}</p>
                       </div>
                     </li>
                   );

@@ -7,7 +7,7 @@ import Select, { SelectChangeEvent } from '@mui/material/Select';
 import './SelectDropDown.scss';
 
 export default function SelectDropDown() {
-  const [age, setAge] = React.useState('');
+  const [sic, setAge] = React.useState('ANZSIC');
 
   const handleChange = (event: SelectChangeEvent) => {
     setAge(event.target.value as string);
@@ -16,18 +16,28 @@ export default function SelectDropDown() {
   return (
     <Box sx={{ minWidth: 120 }}>
       <FormControl fullWidth>
-        <InputLabel id="demo-simple-select-label">Age</InputLabel>
-        <Select
-          labelId="demo-simple-select-label"
+         <Select
           id="demo-simple-select"
-          value={age}
-          label="Age"
+          value={sic}
+          displayEmpty
           onChange={handleChange}
-          className="box-white"
-        >
-          <MenuItem value={10}>Ten</MenuItem>
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
+          inputProps={{ 'aria-label': 'Without label' }}
+          className="box-white">
+          <MenuItem value={'ANZSIC'}>ANZSIC</MenuItem>
+          <MenuItem value={'CNAE'}>CNAE</MenuItem>
+          <MenuItem value={'HSIC'}>HSIC</MenuItem>
+          <MenuItem value={'ICNEA'}>ICNEA</MenuItem>
+          <MenuItem value={'ISIC'}>ISIC</MenuItem>
+          <MenuItem value={'JSIC'}>JSIC</MenuItem>
+          <MenuItem value={'KSIC'}>KSIC</MenuItem>
+          <MenuItem value={'NACE'}>NACE</MenuItem>
+          <MenuItem value={'NAF'}>NAF</MenuItem>
+          <MenuItem value={'NAICS'}>NAICS</MenuItem>
+          <MenuItem value={'NIC'}>NIC</MenuItem>
+          <MenuItem value={'SCIAN'}>SCIAN</MenuItem>
+          <MenuItem value={'SIC'}>SIC</MenuItem>
+          <MenuItem value={'SNI'}>SNI</MenuItem>
+          <MenuItem value={'UKSIC'}>UKSIC</MenuItem>
         </Select>
       </FormControl>
     </Box>

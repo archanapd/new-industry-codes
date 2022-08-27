@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { Container, Box, Button } from '@mui/material';
 import NavBar from 'components/Navbar/NavBar';
@@ -10,10 +10,50 @@ import arrowsImg from 'assets/arrows.png';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import Switch from '@mui/material/Switch';
 import BasicAccordion from 'components/BasicAccordion/BasicAccordion';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { callAPI } from 'helpers/api';
+import { BASE_URL } from 'config/apiconfig';
 
 const label = { inputProps: { 'aria-label': 'Switch demo' } };
 
 export default function Structure(props: any) {
+
+  const { state } = useLocation();
+ 
+  const propsData:any = React.useState(state)[0];
+
+  console.log(propsData)
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    getStructureDetail();
+  }, [])
+
+  const navigate = useNavigate();
+  
+  const navigateToStructure = () => { 
+    navigate('/home');
+  };
+
+  const getStructureDetail = () => {
+    callAPI({
+      method: 'get',
+      resource: BASE_URL + 'code/hierarchy',
+      params :{
+        [propsData.type] : Number(propsData?.data?.code_range) || Number(propsData?.data?.naics_code),
+        "code" : "[3,4,5,6,7,8]"
+      },
+      success: (jsonResponse) => {
+        setStructureDetails(jsonResponse?.data);
+      },
+      error: (error) => console.log(error)
+    });
+  };
+
+  let [structureDetails, setStructureDetails]: any = useState<any[]>([]);
+
+  const [data, setData] = useState('');
+
   return (
     <div className="App inner-pages">
       <NavBar className="inner-header" />
@@ -21,14 +61,11 @@ export default function Structure(props: any) {
         <section className="inner-banner">
           <div className="container py-5">
             <div className="inner-banner-wrap d-flex flex-column  justify-content-center">
-              <h2 className="mb-0 text-start">Structure of NAICS Code 44-45</h2>
+              <h2 className="mb-0 text-start">Structure of {propsData.type.toUpperCase()} Code {propsData.data.naics_code || propsData.data.code_range}</h2>
               <p className="inner-su-title">
-                Section 44 - Retailers of Motor Vehicle & Parts Dealers,
-                Furniture, Electronics/Appliances,
-                <br /> Building Material, Garden Supplies, Food, Beverages,
-                Health Care, Gas Stations
+                Section {propsData.data.naics_code || propsData.data.code_range} - {propsData.data.short_desc}
               </p>
-              <a className="text-light" href="">
+              <a className="text-light" href="" onClick={() => navigateToStructure()}>
                 <ArrowBackIcon className="lnk-back-icon" /> Back to Home
               </a>
             </div>
@@ -69,7 +106,7 @@ export default function Structure(props: any) {
                 <span>Expand all rows</span>
               </div>
               <div className="accordion-one">
-                <BasicAccordion />
+                <BasicAccordion structureDetails={structureDetails}/>
               </div>
             </div>
           </section>

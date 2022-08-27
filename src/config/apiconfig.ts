@@ -23,7 +23,7 @@ switch (buildEnv) {
     backendBaseUrl = '';
     break;
   default:
-    host = '';
+    host = 'http://3.224.174.111:8080/';
     backendBaseUrl = '';
     break;
 }

@@ -17,6 +17,8 @@ import Footer from 'components/Footer/Footer';
 import TabLinks from 'components/TabLinks/TabLinks';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import SearchIcon from '@mui/icons-material/Search';
+import HomeSearch from 'views/HomeSearch';
+
 
 function App() {
   return (
@@ -38,15 +40,14 @@ function App() {
               </div>
               <div className="col-lg-6">
                 <h1 className="display-5 fw-bold mb-5">
-                  Maecenas pulvinar scelerisque metus, a porttitor nisl dapibus
-                  ac.
+                The best resource for understanding and <br /> researching Industrial Classification Systems across 
                 </h1>
                 <p className="lead">
-                  Maecenas pulvinar scelerisque metus,
-                  <br /> a porttitor nisl dapibus ac. Suspendisse vitae <br />
-                  mi massa.
+                Research over 15 different industrial classification <br />
+                systems with detailed insights to each one of them.
                 </p>
-                <div className="gap-2 d-md-flex justify-content-md-start mt-4">
+                <p>Start researching below by entering a keyword or code  </p>
+                {/* <div className="gap-2 d-md-flex justify-content-md-start mt-4">
                   <Button
                     style={{
                       backgroundColor: '#f06240',
@@ -60,54 +61,57 @@ function App() {
                   >
                     Button
                   </Button>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
         </section>
-        <section className="home-search p-4">
+        <section className="home-search p-5">
           <div className="container">
-            <div className="row g-3">
+            <div className="row g-3"  >
               <div className="col-md-4">
                 <SelectDropDown />
               </div>
-              <div className="col-md-5">
+              <div className="col-md-6">
                 {/* <SearchIcon/> */}
                 <TextField
-                  label="Search"
-                  placeholder="Search"
+                  placeholder="Search by Keywords or Code"
                   fullWidth
                   style={{ fontSize: '2rem' }}
                 />
               </div>
-              <div className="col-md-3">
+              <div className="col-md-2">
                 <Button
                   style={{
+                    
                     backgroundColor: '#f06240',
                     borderRadius: '3px',
-                    minWidth: '160px',
                     minHeight: '48px',
                     height: '100%',
                     textTransform: 'none',
-                    fontSize: '1.2rem'
+                    fontSize: '1.2rem',
+                    width: '100%'
+                   
+                
                   }}
                   variant="contained"
                 >
-                  Button
+                  Search
                 </Button>
               </div>
             </div>
           </div>
         </section>
         <section className="home-list p-5">
-          <div className="container">
-            <TabLinks />
+          <div className="container tab-link-wrapper">
+             <TabLinks />
+          
           </div>
         </section>
         <section className="regions">
           <div className="container px-4 py-5">
             <h2 className="pb-2 text-center">
-              World Regions and Industry Classifications
+            World Regions and Industrial Classifications
             </h2>
             <div className="text-center my-5">
               <img src={countryImg} alt="" />
@@ -116,7 +120,7 @@ function App() {
             <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 ">
               <div className="col d-flex align-items-start">
                 <div>
-                  <h4 className="fw-bold mb-2">Text here</h4>
+                  <h4 className="fw-bold mb-2">Classification System</h4>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Maecenas pulvinar scelerisque metus, a porttitor nisl
@@ -126,7 +130,20 @@ function App() {
               </div>
               <div className="col d-flex align-items-start">
                 <div>
-                  <h4 className="fw-bold mb-2">Text here</h4>
+                  <h4 className="fw-bold mb-2">Development Indicators</h4>
+                  <p>
+                  GDP:<br />
+                  Agriculture (% GDP):<br />
+                  Industry (% GDP):<br />
+                  Manufacturing (% GDP):<br />
+                  Services (% GDP):<br />
+                  
+                  </p>
+                </div>
+              </div>
+              <div className="col d-flex align-items-start">
+                <div>
+                  <h4 className="fw-bold mb-2">Major <br /> Activities</h4>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Maecenas pulvinar scelerisque metus, a porttitor nisl
@@ -136,17 +153,7 @@ function App() {
               </div>
               <div className="col d-flex align-items-start">
                 <div>
-                  <h4 className="fw-bold mb-2">Text here</h4>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Maecenas pulvinar scelerisque metus, a porttitor nisl
-                    dapibus ac. Suspendisse vitae mi massa.
-                  </p>
-                </div>
-              </div>
-              <div className="col d-flex align-items-start">
-                <div>
-                  <h4 className="fw-bold mb-2">Text here</h4>
+                  <h4 className="fw-bold mb-2">Employment Stats</h4>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Maecenas pulvinar scelerisque metus, a porttitor nisl
@@ -161,9 +168,7 @@ function App() {
           <div className="container px-4 py-5">
             <h2 className="pb-2 text-center text-light">Code Conversion</h2>
             <p className="text-center">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-              pulvinar scelerisque
-              <br />
+            Code mapping and cross references across multiple industrial classification systems. Just enter a keyword or code and select the desired classification systems.
               metus, a porttitor nisl dapibus ac. Suspendisse vitae mi massa.
               Aliquam ac neque nisl.
             </p>
@@ -176,8 +181,8 @@ function App() {
                 /> */}
                 <TextField
                   className="box-outline"
-                  label="Search"
-                  placeholder="Search"
+                  label="Enter colde or keyword"
+                  placeholder="Enter colde or keyword"
                   fullWidth
                   style={{ fontSize: '2rem' }}
                 />
@@ -216,19 +221,18 @@ function App() {
             </div>
           </div>
         </section>
+        
         <section className="download py-5">
-          <div className="container px-4 py-5">
-            <h2 className="pb-2 text-center">
+           <div className="container px-4 py-5">
+             <h2 className="pb-2 text-center">
               Download detailed classifications
-            </h2>
-            <p className="text-center">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-              pulvinar scelerisque
-              <br />
-              metus, a porttitor nisl dapibus ac. Suspendisse vitae mi massa.
-              Aliquam ac neque nisl.
+            </h2> 
+             <p className="text-center">
+            You can download detailed industry classification with all inclusions, exclusions and explanatory notes by selecting the options below.
             </p>
-            <div className="row g-3 my-4">
+           
+             <div className="row g-3 mt-4">
+            
               <div className="col-md-4">
                 <SelectDropDown />
               </div>
@@ -253,9 +257,17 @@ function App() {
                   Download
                 </Button>{' '}
               </div>
-            </div>
+            </div>  
           </div>
+      
+         <div className='site_tittle'>
+          <h1 className='site_tittle_head'>Coming Soon...</h1>
+         </div>
+          <div className='overlay' ></div>
+
+         
         </section>
+        
         <section className="img-block">
           <div className="row m-0">
             <div className="col-md-4">
@@ -291,7 +303,7 @@ function App() {
         </section>
         <section className="testimonials my-5">
           <div className="container px-4 py-5">
-            <h2 className="pb-4 text-center mb-5">What client say</h2>
+            <h2 className="pb-4 text-center mb-5">Clients</h2>
 
             <div
               id="carouselExampleInterval"

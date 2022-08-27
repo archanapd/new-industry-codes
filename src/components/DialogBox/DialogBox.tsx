@@ -8,27 +8,22 @@ import DialogTitle from '@mui/material/DialogTitle';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 
-export default function DialogBox() {
-  const [open, setOpen] = React.useState(false);
+export default function DialogBox(props: any) {
+  let { popup, showPopup } = props;
+
   const theme = useTheme();
   const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
 
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
   const handleClose = () => {
-    setOpen(false);
+    showPopup(false);
   };
 
+  
   return (
     <div>
-      <Button variant="outlined" onClick={handleClickOpen}>
-        Open responsive dialog
-      </Button>
       <Dialog
         fullScreen={fullScreen}
-        open={open}
+        open={popup}
         onClose={handleClose}
         aria-labelledby="responsive-dialog-title"
       >

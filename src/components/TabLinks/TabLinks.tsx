@@ -49,6 +49,7 @@ export default function TabLinks() {
     });
   };
 
+  console.log('dialogBox 1', dialogBox);
   const navigateToStructure = (type:any, menuValueSelected: any) => {
     console.log(menuValueSelected)
     var data = {
@@ -56,12 +57,12 @@ export default function TabLinks() {
       data : menuValueSelected
     }
 
-    //showDialogBox(true);
+    showDialogBox(true);
 
-    navigate('/structure', {
-      replace : true,
-      state : data 
-    });
+    // navigate('/structure', {
+    //   replace : true,
+    //   state : data 
+    // });
   };
 
   // const navigateToStructure = () => {
@@ -122,7 +123,7 @@ export default function TabLinks() {
               )
             })}
 
-            {dialogBox && <DialogBox></DialogBox>}
+            {dialogBox && <DialogBox showPopup={showDialogBox} popup={dialogBox}></DialogBox>}
           </div>
         </div>
       </TabPanel>

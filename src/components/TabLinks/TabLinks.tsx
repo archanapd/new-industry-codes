@@ -7,8 +7,7 @@ import Typography from '@mui/material/Typography';
 import { callAPI } from 'helpers/api';
 import { BASE_URL } from 'config/apiconfig';
 import { Link, useNavigate } from 'react-router-dom';
-import DialogBox from 'components/DialogBox/DialogBox';
-
+import PopOver from 'components/PopOver/PopOver';
 interface TabPanelProps {
   children?: React.ReactNode;
   value: string;
@@ -29,7 +28,8 @@ export default function TabLinks() {
     setMenuValue(newValue);
   };
 
-  const [dialogBox , showDialogBox] = useState(false)
+  const [popUp , showPopUp] = useState(false);
+  let [currentTarget, setCurrentTarget] = useState([]);
 
   let [searchResults, setSearchResults]: any = useState<any[]>([]);
 
@@ -49,15 +49,14 @@ export default function TabLinks() {
     });
   };
 
-  console.log('dialogBox 1', dialogBox);
-  const navigateToStructure = (type:any, menuValueSelected: any) => {
-    console.log(menuValueSelected)
+  const navigateToStructure = (event: any, type:any, menuValueSelected: any) => {
+    setCurrentTarget(event.currentTarget);
     var data = {
       type : type,
       data : menuValueSelected
     }
 
-    showDialogBox(true);
+    showPopUp(true);
 
     // navigate('/structure', {
     //   replace : true,
@@ -98,7 +97,7 @@ export default function TabLinks() {
               return (
                 item?.[menuValueSelected]?.map((data: any, i: number) => {
                   return (
-                    <div className="col-md-4" key={i} onClick={() => navigateToStructure(menuValueSelected,data)}>
+                    <div className="col-md-4" key={i} onClick={(event: any) => navigateToStructure(event,menuValueSelected,data)}>
                       <div className="d-flex align-items-center p-3 border bg-light pointer rangre_data">
                         <div className="col-3">
                            <strong>{data.code_range}</strong> 
@@ -123,7 +122,7 @@ export default function TabLinks() {
               )
             })}
 
-            {dialogBox && <DialogBox showPopup={showDialogBox} popup={dialogBox}></DialogBox>}
+            {popUp && <PopOver showPopup={showPopUp} popup={popUp} targetElement={currentTarget}></PopOver>}
           </div>
         </div>
       </TabPanel>

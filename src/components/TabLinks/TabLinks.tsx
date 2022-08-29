@@ -8,6 +8,9 @@ import { callAPI } from 'helpers/api';
 import { BASE_URL } from 'config/apiconfig';
 import { Link, useNavigate } from 'react-router-dom';
 import PopOver from 'components/PopOver/PopOver';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+
 interface TabPanelProps {
   children?: React.ReactNode;
   value: string;
@@ -56,7 +59,7 @@ export default function TabLinks() {
       data : menuValueSelected
     }
 
-    showPopUp(true);
+    showPopUp(!popUp);
 
     // navigate('/structure', {
     //   replace : true,
@@ -67,7 +70,8 @@ export default function TabLinks() {
   // const navigateToStructure = () => {
   //   navigate('/structure');
   // };
-  const [popup , setPop] = useState(false)
+  const [popup , setPop] = useState(false);
+  console.log(popup);
   const handleClick = () => {
     setPop(!popup);
     console.log()
@@ -97,22 +101,23 @@ export default function TabLinks() {
               return (
                 item?.[menuValueSelected]?.map((data: any, i: number) => {
                   return (
-                    <div className="col-md-4" key={i} onClick={(event: any) => navigateToStructure(event,menuValueSelected,data)}>
+                    <div className="col-md-4"  key={i} onClick={(event: any) => navigateToStructure(event,menuValueSelected,data)}>
                       <div className="d-flex align-items-center p-3 border bg-light pointer rangre_data">
                         <div className="col-3">
                            <strong>{data.code_range}</strong> 
                         </div>
-                         <div className="col-9 tab-short-desc align-items-center short_desc"> 
+                         <div className="col-8 tab-short-desc align-items-center short_desc"> 
                          {/* <div className="col-9 tab-short-desc">  */}
                          {data.short_desc}
                         </div>
-                        <div>
-                          <div className="drop-circle" onClick={handleClick}>
+                        <div className='col-1 text-end'>
+                          {popUp ? <KeyboardArrowUpIcon />: <KeyboardArrowDownIcon />} 
+                          {/* <div className="drop-circle" onClick={handleClick}>
                             {popup?
                             <div className="popup">
                               <div className='container'><p>hello welcome to reactjs</p></div>
                             </div>:""}
-                          </div>
+                          </div> */}
                         </div>
                        
                       </div>

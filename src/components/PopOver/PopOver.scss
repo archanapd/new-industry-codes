@@ -1,0 +1,14 @@
+.list-popover {
+    .MuiPopover-paper {
+        border: 1px solid var(--red);
+        width: 100%;
+        max-width: 426px;
+    }
+}
+.tablist-popup-item {
+    li {
+        padding: 1rem 0;
+    }
+    span {
+    }
+}

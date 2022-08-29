@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Popover from '@mui/material/Popover';
 import Typography from '@mui/material/Typography';
+import './PopOver.scss';
 
 export default function PopOver(props : any) {
 
@@ -26,8 +27,13 @@ export default function PopOver(props : any) {
           vertical: 'bottom',
           horizontal: 'left',
         }}
+        className="list-popover"
       >
-        <Typography sx={{ p: 2 }}>The content of the Popover.</Typography>
+       <ul className='tablist-popup-item px-3'>
+            <li className='d-flex'><strong className='pe-3'>31 -</strong> Food</li>
+            <li className='d-flex'><strong className='pe-3'>31 -</strong> Food</li>
+            <li className='d-flex'><strong className='pe-3'>31 -</strong> Food</li>
+          </ul>
       </Popover>
     </div>
   );
